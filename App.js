@@ -1,58 +1,51 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, { useEffect } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
+  Dimensions,
   Text,
-  StatusBar,
+  View,
 } from 'react-native';
 import Orientation from 'react-native-orientation-locker';
 import DeviceInfo from 'react-native-device-info';
+import { Icon } from './src/components';
 
-import Icon from './src/components/Icon';
+const SCREEN = Dimensions.get('window');
 
-const App = () => {
+const App = (props) => {
   useEffect(() => {
     DeviceInfo.isTablet().then((res) => {
-      console.log('res', res);
       window.isTablet = res;
       if (res) {
         Orientation.lockToLandscape();
       } else {
         Orientation.lockToPortrait();
       }
-    })
-    
-  }, [])
+    });
+  }, []);
+
   return (
-    <>
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Icon name='youtube' size={36} color='red'/>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={[]}>
+      <Text>hehe</Text>
+      <Text>hehe</Text>
+      <Text>hehe</Text>
+      <Text>hehe</Text>
+      <Text>hehe</Text>
+      <Text>hehe</Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    
+  container: {
+    flex: 1,
   },
-  engine: {
-    position: 'absolute',
+  box: {
+    backgroundColor: 'red',
+    bottom: 0,
     right: 0,
+  },
+  review: {
+    position: 'absolute',
   },
 });
 
