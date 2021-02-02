@@ -88,7 +88,7 @@ const DATA = [
     from: "D'Artagnan",
     when: '3:11 PM',
     message:
-      'Unus pro omnibus, omnes pro uno. Nunc scelerisque, massa non lacinia porta, quam odio dapibus enim, nec tincidunt dolor leo non neque',
+    'Unus pro omnibus, omnes pro uno. Nunc scelerisque, massa non lacinia porta, quam odio dapibus enim, nec tincidunt dolor leo non neque',
   },
   {
     from: 'Aramis',
